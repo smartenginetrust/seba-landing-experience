@@ -64,7 +64,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-primary-foreground/60">Telefon</div>
-                    <div className="font-semibold">+90 532 123 45 67</div>
+                    <div className="font-semibold">+90 546 545 14 16</div>
                   </div>
                 </div>
 
@@ -74,7 +74,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <div className="text-sm text-primary-foreground/60">Adres</div>
-                    <div className="font-semibold">İstanbul, Türkiye</div>
+                    <div className="font-semibold">Ankara, Türkiye</div>
                   </div>
                 </div>
               </div>
