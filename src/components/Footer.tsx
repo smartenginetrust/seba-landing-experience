@@ -40,8 +40,8 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">İletişim</h4>
             <ul className="space-y-2 text-background/70">
               <li>info@sebaajans.com</li>
-              <li>+90 532 123 45 67</li>
-              <li>İstanbul, Türkiye</li>
+              <li>+90 546 545 14 16</li>
+              <li>Ankara, Türkiye</li>
             </ul>
           </div>
         </div>
