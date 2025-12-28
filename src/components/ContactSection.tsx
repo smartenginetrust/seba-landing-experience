@@ -83,7 +83,12 @@ const ContactSection = () => {
                 <p className="text-primary-foreground/80 mb-6">
                   Formu doldurun, 24 saat içinde size geri dönüş yapalım.
                 </p>
-                <Button variant="hero" size="xl" className="w-full group">
+                <Button 
+                  variant="hero" 
+                  size="xl" 
+                  className="w-full group"
+                  onClick={() => window.open('https://wa.me/905465451416?text=Merhaba, teklif almak istiyorum.', '_blank')}
+                >
                   Ücretsiz Teklif Al
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
