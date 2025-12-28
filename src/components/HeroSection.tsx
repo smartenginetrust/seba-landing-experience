@@ -68,12 +68,22 @@ const HeroSection = () => {
           </p>
 
           <div className="reveal opacity-0 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button variant="hero" size="xl" className="group">
+            <Button 
+              variant="hero" 
+              size="xl" 
+              className="group"
+              onClick={() => window.location.href = 'tel:+905465451416'}
+            >
               Ücretsiz Danışmanlık
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="heroOutline" size="xl" className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 hover:text-primary-foreground">
-              Projelerimizi İncele
+            <Button 
+              variant="heroOutline" 
+              size="xl" 
+              className="text-primary-foreground border-primary-foreground/30 hover:bg-primary-foreground/10 hover:text-primary-foreground"
+              onClick={() => window.open('https://wa.me/905465451416?text=Merhaba, teklif almak istiyorum.', '_blank')}
+            >
+              Teklif Al
             </Button>
           </div>
 
