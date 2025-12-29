@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import { QrCode, Globe, ShoppingCart, TrendingUp, Share2, Smartphone } from "lucide-react";
+import { QrCode, Globe, ShoppingCart, TrendingUp, Share2, Smartphone, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import serviceQrMenu from "@/assets/service-qr-menu.jpg";
 import serviceCorporate from "@/assets/service-corporate.jpg";
 import serviceEcommerce from "@/assets/service-ecommerce.jpg";
@@ -13,36 +14,42 @@ const services = [
     title: "QR Kodlu Menü",
     description: "Restoranlar için modern, temassız dijital menü çözümleri",
     image: serviceQrMenu,
+    link: "/hizmetler/qr-menu",
   },
   {
     icon: Globe,
     title: "Kurumsal Web Sitesi",
     description: "Profesyonel ve etkileyici kurumsal web sitesi tasarımları",
     image: serviceCorporate,
+    link: "/hizmetler/kurumsal-web",
   },
   {
     icon: ShoppingCart,
     title: "E-Ticaret Çözümleri",
     description: "Satışlarınızı artıracak e-ticaret platformları",
     image: serviceEcommerce,
+    link: "/hizmetler/e-ticaret",
   },
   {
     icon: TrendingUp,
     title: "Dijital Pazarlama",
     description: "SEO, Google Ads ve sosyal medya reklamları ile büyüme",
     image: serviceMarketing,
+    link: "/hizmetler/dijital-pazarlama",
   },
   {
     icon: Share2,
     title: "Sosyal Medya Yönetimi",
     description: "Markanızı güçlendiren içerik stratejileri ve yönetim",
     image: serviceSocial,
+    link: "/hizmetler/sosyal-medya",
   },
   {
     icon: Smartphone,
     title: "Mobil Uygulama",
     description: "iOS ve Android için özel mobil uygulama geliştirme",
     image: serviceMobile,
+    link: "/hizmetler/mobil-uygulama",
   },
 ];
 
@@ -85,9 +92,10 @@ const ServicesSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
-            <div
+            <Link
+              to={service.link}
               key={service.title}
-              className="reveal opacity-0 group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              className="reveal opacity-0 group relative bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 block"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="relative h-48 overflow-hidden">
@@ -106,13 +114,17 @@ const ServicesSection = () => {
                 <h3 className="text-xl font-bold text-foreground mb-2">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground">
+                <p className="text-muted-foreground mb-4">
                   {service.description}
                 </p>
+                <div className="flex items-center text-accent font-semibold group-hover:gap-2 transition-all">
+                  Detayları Gör
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
 
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-            </div>
+            </Link>
           ))}
         </div>
       </div>
