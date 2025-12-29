@@ -29,8 +29,9 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <a href="#" className="text-2xl md:text-3xl font-extrabold tracking-tight">
+        <a href="/" className="text-2xl md:text-3xl font-extrabold tracking-tight">
           <span className="text-accent">SEBA</span>
+          <span className="text-foreground"> dijital</span>
         </a>
 
         {/* Desktop Navigation */}
