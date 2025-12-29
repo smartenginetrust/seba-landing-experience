@@ -8,6 +8,7 @@ const Footer = () => {
           <div className="md:col-span-2">
             <div className="text-2xl font-extrabold mb-4">
               <span className="text-accent">SEBA</span>
+              <span className="text-background/50"> dijital</span>
             </div>
             <p className="text-background/70 max-w-md mb-6">
               Dijital dönüşümünüzde güvenilir partneriniz. Modern web çözümleri 
